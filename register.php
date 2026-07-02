@@ -21,49 +21,49 @@
 
                 <div class="card-body p-4">
 
-                    <form>
+                    <form action="code.php" method="POST">
                         <div class="row">
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">
                                     First Name
                                 </label>
-                                <input type="text" name="first_name" class="form-control" placeholder="Enter first name">
+                                <input type="text" name="first_name" class="form-control border-secondary" placeholder="Enter first name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">
                                     Last Name
                                 </label>
-                                <input type="text" name="last_name" class="form-control" placeholder="Enter last name">
+                                <input type="text" name="last_name" class="form-control border-secondary" placeholder="Enter last name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">
                                     Contact
                                 </label>
-                                <input type="text" name="contact" class="form-control" placeholder="Enter contact number">
+                                <input type="text" name="contact" class="form-control border-secondary" placeholder="Enter contact number">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">
                                     Email
                                 </label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter email address">
+                                <input type="email" name="email" class="form-control border-secondary" placeholder="Enter email address">
                             </div>
 
                             <div class="col-12 mb-4">
                                 <label class="form-label fw-semibold">
                                     Password
                                 </label>
-                                <input type="password" name="password" class="form-control" placeholder="Enter password">
+                                <input type="password" name="password" class="form-control border-secondary" placeholder="Enter password">
                             </div>
 
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">
 
-                            <button type="submit" name="register_btn" class="btn btn-success fw-semibold">
+                            <button type="submit" name="register_btn" class="btn btn-success px-4 fw-semibold">
                                 Register
                             </button>
 
