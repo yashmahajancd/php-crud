@@ -1,4 +1,5 @@
 <?php include('includes/header.php') ?>
+<?php include('dbconfig.php')?>
 
 <div class="container py-5">
   <div class="row justify-content-center">
@@ -22,6 +23,14 @@
         <div class="card-body">
 
           <div class="table-responsive">
+
+            <?php
+            
+            $register = "SELECT * FROM register";
+            $register_run = mysqli_query($conn, $register);
+            
+            ?>
+
             <table class="table table-hover table-bordered align-middle text-center">
               <thead class="table-dark">
 

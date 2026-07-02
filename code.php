@@ -1,6 +1,6 @@
-<?php
+<?php include('dbconfig.php')?>
 
-$conn = mysqli_connect("localhost:3307", "root", "", "php_crud");
+<?php
 
 if (isset($_POST['register_btn'])) {
     $fname = $_POST['first_name'];
