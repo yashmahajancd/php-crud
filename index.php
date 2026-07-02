@@ -21,14 +21,15 @@
         </div>
 
         <div class="card-body">
-
           <div class="table-responsive">
 
             <?php
             
-            $register = "SELECT * FROM register";
-            $register_run = mysqli_query($conn, $register);
-            
+              $register = "SELECT * FROM register";
+              $register_run = mysqli_query($conn, $register);
+
+              if(mysqli_num_rows($register_run) > 0) {
+
             ?>
 
             <table class="table table-hover table-bordered align-middle text-center">
@@ -48,36 +49,47 @@
               </thead>
               <tbody>
 
+              <?php
+              
+                while($reg_row = mysqli_fetch_array($register_run)) {
+              
+              ?>
+
                 <tr>
-
-                  <td>1</td>
-                  <td>Bhavesh</td>
-                  <td>Borse</td>
-                  <td>borsebhavesh@gmail.com</td>
-                  <td>********</td>
-                  <td>8542168475</td>
-
+                  <td><?php echo $reg_row['id']; ?></td>
+                  <td><?php echo $reg_row['fname']; ?></td>
+                  <td><?php echo $reg_row['lname']; ?></td>
+                  <td><?php echo $reg_row['email']; ?></td>
+                  <td><?php echo str_repeat("*", strlen($reg_row['password'])); ?></td>
+                  <td><?php echo $reg_row['contact']; ?></td>
                   <td>
                     <a href="register-edit.php"
                       class="btn btn-info btn-sm fw-semibold">
                       Edit
                     </a>
                   </td>
-
                   <td>
                     <a href="register-delete.php"
                       class="btn btn-danger btn-sm fw-semibold">
                       Delete
                     </a>
                   </td>
-
                 </tr>
+
+              <?php } ?>
 
               </tbody>
             </table>
 
-          </div>
+            <?php
+            
+              } else {
+                echo "No Record Found!";
+              }
+            
+            ?>
 
+          </div>
         </div>
 
       </div>
