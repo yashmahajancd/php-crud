@@ -14,10 +14,10 @@ if (isset($_POST['register_btn'])) {
     $query_run = mysqli_query($conn, $query);
 
     if ($query_run) {
-        echo "Registered Successfully.";
+        // echo "Registered Successfully.";
         header('Location: index.php');
     } else {
-        echo "Something Went Wrong!";
+        // echo "Something Went Wrong!";
         header('Location: register.php');
     }
 }
