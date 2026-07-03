@@ -16,9 +16,13 @@ if (isset($_POST['register_btn'])) {
 
     if ($query_run) {
         // echo "Registered Successfully.";
+        $_SESSION['status'] = "Registered Successfully.";
+        $_SESSION['status_code'] = "success";
         header('Location: index.php');
     } else {
         // echo "Something Went Wrong!";
+        $_SESSION['status'] = "Something Went Wrong!";
+        $_SESSION['status_code'] = "error";
         header('Location: register.php');
     }
 }
@@ -39,9 +43,13 @@ if(isset($_POST['update_btn'])) {
 
     if($update_query_run) {
         // echo "Data Updated.";
+        $_SESSION['status'] = "Data Updated.";
+        $_SESSION['status_code'] = "success";
         header('Location: index.php');
     } else {
         // echo "Data Not Updated!";
+        $_SESSION['status'] = "Data Not Updated!";
+        $_SESSION['status_code'] = "error";
         header('Location: index.php');
     }
 }
@@ -57,9 +65,13 @@ if(isset($_POST['delete_btn'])) {
 
     if($delete_query_run) {
         // echo "Data Deleted.";
+        $_SESSION['status'] = "Data Deleted.";
+        $_SESSION['status_code'] = "success";
         header('Location: index.php');
     } else {
-        // echo "Data Not Deleted";
+        // echo "Data Not Deleted!";
+        $_SESSION['status'] = "Data Not Deleted!";
+        $_SESSION['status_code'] = "error";
         header('Location: index.php');
     }
 }
