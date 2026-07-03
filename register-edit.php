@@ -36,6 +36,8 @@ if(mysqli_num_rows($query_run) > 0) {
                     <form action="code.php" method="POST">
                         <div class="row">
 
+                            <input type="hidden" name="update_id" class="form-control border-secondary" value="<?php echo $row['id'] ?>">
+
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">
                                     First Name
