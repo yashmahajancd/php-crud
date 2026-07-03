@@ -50,6 +50,18 @@ if(isset($_POST['update_btn'])) {
 // DELETE OPERATION
 if(isset($_POST['delete_btn'])) {
     $delete_id = $_POST['delete_id'];
+
+    $delete_query = "DELETE FROM register WHERE id = '$delete_id'";
+
+    $delete_query_run = mysqli_query($conn, $delete_query);
+
+    if($delete_query_run) {
+        // echo "Data Deleted.";
+        header('Location: index.php');
+    } else {
+        // echo "Data Not Deleted";
+        header('Location: index.php');
+    }
 }
 
 ?>
