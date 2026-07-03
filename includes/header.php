@@ -53,7 +53,7 @@
 
             <div class="d-flex gap-5 align-items-center">
 
-                <button onclick="window.location.href=''" class="btn btn-outline-light btn-sm px-3">
+                <button onclick="window.location.href='http://localhost:8080/phpmyadmin/index.php?route=/sql&pos=0&db=php_crud&table=register'" class="btn btn-outline-light btn-sm px-3">
                     Admin Panel
                 </button>
 
