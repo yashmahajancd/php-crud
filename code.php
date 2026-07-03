@@ -46,4 +46,10 @@ if(isset($_POST['update_btn'])) {
     }
 }
 
+
+// DELETE OPERATION
+if(isset($_POST['delete_btn'])) {
+    $delete_id = $_POST['delete_id'];
+}
+
 ?>

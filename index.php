@@ -69,10 +69,12 @@
                     </a>
                   </td>
                   <td>
-                    <a href="register-delete.php"
-                      class="btn btn-danger btn-sm fw-semibold">
-                      Delete
-                    </a>
+                    <form action="code.php" method="POST">
+                      <input type="hidden" name="delete_id" value="<?php echo $reg_row['id']; ?>">
+                      <button type="submit" name="delete_btn" class="btn btn-danger btn-sm fw-semibold">
+                        Delete
+                      </button>
+                    </form>
                   </td>
                 </tr>
 
