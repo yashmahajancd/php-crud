@@ -63,7 +63,7 @@
                   <td><?php echo str_repeat("*", strlen($reg_row['password'])); ?></td>
                   <td><?php echo $reg_row['contact']; ?></td>
                   <td>
-                    <a href="register-edit.php"
+                    <a href="register-edit.php?id=<?php echo $reg_row['id']; ?>"
                       class="btn btn-info btn-sm fw-semibold">
                       Edit
                     </a>
