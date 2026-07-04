@@ -95,7 +95,7 @@ http://localhost/phpmyadmin
 Create a database:
 
 ```
-crud_db
+php_crud
 ```
 
 Create a table named:
