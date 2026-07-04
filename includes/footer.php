@@ -24,6 +24,35 @@
   
   ?>
 
+  <!-- JQuery -->
+  <script src="javascript/jquery.js"></script>
+  <script>
+
+    $(document).ready(function() {
+      
+      $('.delete_btn_ajax').click(function(e) {
+        e.preventDefault();
+
+        var delete_id = $(this).closest("tr").find('.delete_id_value').val();
+        // console.log(delete_id);
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this Data!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            //
+          }
+        });
+      });
+      
+    });
+
+  </script>
+
 </body>
 
 </html>

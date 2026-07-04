@@ -44,6 +44,7 @@
                   <th>Contact</th>
                   <th width="120">Edit</th>
                   <th width="120">Delete</th>
+                  <th width="120">Confirm D</th>
                 </tr>
 
               </thead>
@@ -75,6 +76,10 @@
                         Delete
                       </button>
                     </form>
+                  </td>
+                  <td>
+                    <input type="hidden" class="delete_id_value" value="<?php echo $reg_row['id']; ?>">
+                    <a href="javascript:void(0)" class="delete_btn_ajax btn btn-danger btn-sm fw-semibold">Confirm D</a>
                   </td>
                 </tr>
 
