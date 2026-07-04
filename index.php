@@ -37,14 +37,14 @@
 
                 <tr>
                   <th>ID</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
+                  <th class="text-nowrap">First Name</th>
+                  <th class="text-nowrap">Last Name</th>
                   <th>Email</th>
                   <th>Password</th>
                   <th>Contact</th>
                   <th width="120">Edit</th>
                   <th width="120">Delete</th>
-                  <th width="120">Confirm D</th>
+                  <th width="120" class="text-nowrap">Confirm Delete</th>
                 </tr>
 
               </thead>
@@ -79,7 +79,7 @@
                   </td>
                   <td>
                     <input type="hidden" class="delete_id_value" value="<?php echo $reg_row['id']; ?>">
-                    <a href="javascript:void(0)" class="delete_btn_ajax btn btn-danger btn-sm fw-semibold">Confirm D</a>
+                    <a href="javascript:void(0)" class="delete_btn_ajax btn btn-danger btn-sm fw-semibold text-nowrap">Confirm Delete</a>
                   </td>
                 </tr>
 

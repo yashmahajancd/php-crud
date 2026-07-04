@@ -76,4 +76,14 @@ if(isset($_POST['delete_btn'])) {
     }
 }
 
+
+// DELETE OPERATION
+if(isset($_POST['delete_btn_set'])) {
+    $del_id = $_POST['delete_id'];
+
+    $delete_query = "DELETE FROM register WHERE id = '$del_id'";
+
+    $delete_query_run = mysqli_query($conn, $delete_query);
+}
+
 ?>

@@ -44,7 +44,28 @@
         })
         .then((willDelete) => {
           if (willDelete) {
-            //
+            
+            $.ajax({
+              type: "POST",
+              url: "code.php",
+              data: {
+                "delete_btn_set": 1,
+                "delete_id": delete_id,
+              },
+              success: function(response) {
+
+                swal(
+                  "Data Deleted Successfully.",
+                  {
+                    icon: "success"
+                  }
+                ).then((result) => {
+                  location.reload();
+                });
+
+              }
+            });
+
           }
         });
       });
